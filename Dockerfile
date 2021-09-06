@@ -2,7 +2,7 @@
 FROM openjdk:8-jdk
 
 # Copy all of the mule runtime to the image
-COPY ./mule-community-4.3.0 /mule
+COPY ./mule-community-4.3.0 /opt/mule
 
 # Set the shell/bat file as the way to run this image
-ENTRYPOINT [ "/mule/bin/mule" ]
+ENTRYPOINT [ "/opt/mule/bin/mule" ]
