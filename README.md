@@ -1,11 +1,11 @@
 # Mulesoft
 
 Mulesoft is an ESB which encourages a SOA, but is flexable and can fit almost any integration need.
-To learn more, go to [Mulesoft's website](http://www.mulesoft.com)
+To learn more, go to [Mulesoft's website](http://www.mulesoft.com).
 
 ## Community Edition
 
-This copy of the runtime is known as "Community Edition", which means it is an opensource, free to use copy of mulesoft under the [CPAL license](https://github.com/mulesoft/mule/blob/master/LICENSE.txt).
+This copy of the runtime is known as "Community Edition", which means it is an opensource, free to use copy of mulesoft under the [CPAL license](https://github.com/mulesoft/mule/blob/master/LICENSE.txt). You can also contribute to the opensource project [here](https://github.com/mulesoft/mule).
 
 ## Running Mule
 
