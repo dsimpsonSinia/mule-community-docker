@@ -9,5 +9,8 @@ RUN mkdir /opt/mule/apps & mkdir -p /opt/mule/domains/default & mkdir /opt/mule/
 
 VOLUME [ "/opt/mule/apps", "/opt/mule/logs", "/opt/mule/domains", "/opt/mule/lib/patches" ]
 
+EXPOSE 80
+EXPOSE 443
+
 # Set the shell/bat file as the way to run this image
 ENTRYPOINT [ "/opt/mule/bin/mule" ]
