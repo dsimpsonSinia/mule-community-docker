@@ -19,11 +19,13 @@ docker run -d --name mule4ce dtsimpson1/mule4ce
 
 ### Volumes
 
-There are 4 volumes defined to make it easier to deploy apps and domains, view logs, and install patches.
+There are 4 volumes defined to make it easier to deploy apps and domains, view logs, install patches, and modify the config.
+
 - `/opt/mule/apps`
 - `/opt/mule/domains`
 - `/opt/mule/logs`
 - `/opt/mule/lib/patches`
+- `/opt/mule/conf`
 
 ### Ports
 
@@ -41,8 +43,12 @@ To deploy an exported API, simply drop the .jar into the `/opt/mule/apps` direct
 Combining everything above into a single command (which can be modified as you wish):
 
 ```bash
-docker run -d --name mule4ce -v ~/mule/logs:/opt/mule/logs -v ~/mule/apps:/opt/mule/apps -v ~/mule/domains:/opt/mule/domains -v ~/mule/patches:/opt/mule/lib/patches -p 8080:80 dtsimpson1/mule4ce
+docker run -d --name mule4ce -v ~/mule/logs:/opt/mule/logs -v ~/mule/apps:/opt/mule/apps -v ~/mule/domains:/opt/mule/domains -v ~/mule/patches:/opt/mule/lib/patches -v ~/mule/conf:/opt/mule/conf -p 8080:80 dtsimpson1/mule4ce
 ```
+
+## What's new?
+
+- Added the mule `./conf` dir to the volumes that can be mounted.
 
 ## How do I make a Mule API?
 

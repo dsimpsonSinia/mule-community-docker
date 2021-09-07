@@ -7,7 +7,7 @@ COPY ./mule-community-4.3.0 /opt/mule
 # These folders are empty and git doesn't save them, we must create them in the container
 RUN mkdir /opt/mule/apps & mkdir -p /opt/mule/domains/default & mkdir /opt/mule/lib/patches
 
-VOLUME [ "/opt/mule/apps", "/opt/mule/logs", "/opt/mule/domains", "/opt/mule/lib/patches" ]
+VOLUME [ "/opt/mule/apps", "/opt/mule/logs", "/opt/mule/domains", "/opt/mule/lib/patches", "/opt/mule/conf" ]
 
 EXPOSE 80
 EXPOSE 443
