@@ -27,6 +27,10 @@ There are 4 volumes defined to make it easier to deploy apps and domains, view l
 - `/opt/mule/lib/patches`
 - `/opt/mule/conf`
 
+If you bind mount the `conf` folder, you *must* recreate the contents of the folder due to a [limitation in docker](https://docs.docker.com/storage/#tips-for-using-bind-mounts-or-volumes).
+
+If you bind mount the `domains` folder, you *should* create an empty folder in the volume with the name `default`. This is how mule creates the default domain and ensures APIs can run without declaring a domain project.
+
 ### Ports
 
 This image only exposes ports 80 and 443. Thus, if you are deploying multiple artifacts to the same container, you have two options:
@@ -53,3 +57,7 @@ docker run -d --name mule4ce -v ~/mule/logs:/opt/mule/logs -v ~/mule/apps:/opt/m
 ## How do I make a Mule API?
 
 Mulesoft provides lots of great documentation on this, but a link I would recommend if you are a quick learner is [here](https://docs.mulesoft.com/mule-runtime/4.3/mule-app-dev-hellomule).
+
+## Contributing
+
+I welcome contributions if you believe this image is missing anything. You may fork the [repository](https://github.com/dsimpsonSinia/mule-community-docker) and create a Pull Request which I will review.
